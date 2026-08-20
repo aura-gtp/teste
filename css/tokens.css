@@ -1,0 +1,104 @@
+/* tokens.css — sistema de design Ligretech
+   Paleta e regras de governança conforme Brand Kit Express (Referências/Brand Kit Express-Ligretech.pdf)
+   Azul-petróleo é sempre a cor dominante. Verde-oliva é acento controlado (≤15% da área),
+   reservado ao pilar de conteúdo "Conexão com o Agro" — nunca cor de CTA principal fora dele. */
+
+:root {
+  /* ===== Cores de marca ===== */
+  --color-primary: #1F4E5F;        /* azul-petróleo — primária, 28% */
+  --color-primary-dark: #163940;   /* hover/pressed, seções profundas */
+  --color-primary-darker: #102B31;
+  --color-primary-light: #2E6A7E;  /* tints, gradientes sutis */
+  --color-primary-tint: #E7EEF0;   /* fundo suave sobre branco-neutro */
+
+  --color-accent: #6E7F39;         /* verde-oliva — acento, ≤15%, só Pilar "Conexão com o Agro" */
+  --color-accent-dark: #57652D;
+  --color-accent-tint: #EEF1E3;
+
+  --color-neutral: #80807E;        /* alumínio — bordas, ícones inativos, contornos */
+  --color-neutral-light: #C7C6C1;
+  --color-neutral-tint: #ECEAE4;
+
+  --color-bg: #F7F5F0;             /* branco-neutro — base dominante, 55% */
+  --color-surface: #FFFFFF;        /* cartões e blocos elevados sobre o fundo base */
+  --color-surface-2: #F1EFE8;
+
+  --color-text: #1B2426;           /* texto principal — quase-preto neutro, não azul puro */
+  --color-text-muted: #5B5B58;     /* texto secundário — alumínio escurecido para AA (4.5:1) */
+  --color-text-on-dark: #F7F5F0;
+  --color-text-on-dark-muted: #C3CDD0;
+
+  --color-border: #E1DED5;
+  --color-border-on-dark: rgba(247, 245, 240, 0.16);
+
+  /* Estados semânticos — independentes da paleta de marca (nunca usar verde-oliva aqui) */
+  --color-success: #3F7D52;
+  --color-success-tint: #E7F1E9;
+  --color-warning: #9C6B14;
+  --color-warning-tint: #F6EDDC;
+  --color-error: #B3261E;
+  --color-error-tint: #FAEAE8;
+
+  /* ===== Tipografia ===== */
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-script: 'Allura', cursive;
+
+  --text-xs: clamp(0.75rem, 0.72rem + 0.1vw, 0.8125rem);
+  --text-sm: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 0.9rem + 0.15vw, 1rem);
+  --text-lg: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --text-xl: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 1.3rem + 0.9vw, 2rem);
+  --text-3xl: clamp(1.875rem, 1.5rem + 1.6vw, 2.75rem);
+  --text-4xl: clamp(2.25rem, 1.7rem + 2.6vw, 3.75rem);
+  --text-5xl: clamp(2.5rem, 1.8rem + 3.4vw, 4.5rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* ===== Espaçamento (base 4) ===== */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ===== Bordas e sombra ===== */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px rgba(16, 43, 49, 0.06), 0 1px 1px rgba(16, 43, 49, 0.04);
+  --shadow-md: 0 8px 24px rgba(16, 43, 49, 0.08), 0 2px 6px rgba(16, 43, 49, 0.04);
+  --shadow-lg: 0 20px 48px rgba(16, 43, 49, 0.14), 0 4px 12px rgba(16, 43, 49, 0.06);
+  --shadow-focus: 0 0 0 3px rgba(31, 78, 95, 0.35);
+
+  /* ===== Motion ===== */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+  --transition-fast: var(--duration-fast) var(--ease-out-expo);
+  --transition-base: var(--duration-base) var(--ease-out-expo);
+  --transition-slow: var(--duration-slow) var(--ease-out-expo);
+
+  /* ===== Layout ===== */
+  --container-max: 1280px;
+  --container-padding: 1.25rem;
+  --header-height: 76px;
+}

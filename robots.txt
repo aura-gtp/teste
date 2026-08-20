@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /orcamento-recebido.html
+
+Sitemap: https://www.ligretech.com.br/sitemap.xml

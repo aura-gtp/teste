@@ -1,0 +1,52 @@
+/* responsive.css — mobile-first
+   xs: 0-479 | sm: 480px+ | md: 768px+ | lg: 1024px+ | xl: 1280px+ */
+
+@media (min-width: 480px) {
+  .container { padding-inline: var(--space-8); }
+  .sticky-cta-text { display: block; }
+}
+
+@media (min-width: 768px) {
+  .container { padding-inline: var(--space-10); }
+
+  .support-link { display: inline-flex; }
+
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+
+  .form-row-2 { grid-template-columns: 1fr 1fr; }
+
+  .hero-split {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: var(--space-12);
+  }
+
+  .split-reverse { grid-template-columns: 0.9fr 1.1fr; }
+  .split-reverse > :first-child { order: 2; }
+
+  .contact-choice { grid-template-columns: 1fr 1fr; }
+
+  .stat-tile-row { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .main-nav { display: block; }
+  .nav-toggle { display: none; }
+  .mobile-nav { display: none !important; }
+
+  section { padding-block: var(--space-24); }
+  .section-loose { padding-block: var(--space-32); }
+
+  .post-item { grid-template-columns: 260px 1fr; align-items: center; }
+}
+
+@media (min-width: 1280px) {
+  h1 { font-size: var(--text-5xl); }
+}
+
+/* Container queries — cartões que se adaptam ao próprio espaço, não só à viewport */
+.card-wrapper { container-type: inline-size; }
+@container (min-width: 420px) {
+  .card-inline { display: grid; grid-template-columns: auto 1fr; gap: var(--space-5); align-items: start; }
+}
