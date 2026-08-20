@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /php/
-Disallow: /php/.env
-
-Sitemap: https://aurapublicidade.com.br/sitemap.xml
